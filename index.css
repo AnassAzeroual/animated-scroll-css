@@ -1,0 +1,113 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+section:target {
+  outline: 3px dotted red;
+}
+
+article > p:only-of-type {
+  /*   font-size: 4rem; */
+}
+
+section > blockquote:only-of-type {
+  font-size: 2rem;
+  color: red;
+}
+
+/* =========================
+     GENERAL STYLES 
+     NOT RELATED TO THE TIP
+  ============================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #ee6352;
+  --clr-secondary: #d16e8d;
+  --clr-accent: #f7f7ff;
+  --clr-gradient: linear-gradient(
+    -90deg,
+    var(--clr-primary),
+    var(--clr-secondary)
+  );
+  --ff-title: bungee, sans-serif;
+  --ff-body: canada-type-gibson, sans-serif;
+  --fw-body: 300;
+  --fw-bold: 800;
+  --fw-title: 400;
+  --fw-number: 800;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-body);
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  color: var(--clr-primary);
+}
+
+:focus {
+  outline: 5px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+.title {
+  padding: 1em 0 2em;
+  margin: 0;
+  background: var(--clr-gradient);
+  position: relative;
+  z-index: 1000;
+  clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: calc(1rem + 3vw);
+  font-family: var(--ff-title);
+  font-weight: var(--fw-title);
+  color: white;
+}
+
+.title span {
+  font-weight: var(--fw-number);
+  color: black;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 5em;
+  top: -30%;
+  z-index: -1;
+  opacity: 0.25;
+}
+
+.content {
+  width: 80%;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+nav {
+  position: fixed;
+  left: 2em;
+}
+
+html {
+  /*   scroll-behavior: smooth; */
+  /*   scroll-padding-top: 5rem; */
+}
